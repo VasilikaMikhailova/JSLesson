@@ -1,0 +1,11 @@
+.crossed {
+  text-decoration: line-through;
+}
+.make-Red {
+  color: red;
+  background-color: aqua;
+  font-size: large;
+}
+.make-Bold {
+  font-weight: bold;
+}
