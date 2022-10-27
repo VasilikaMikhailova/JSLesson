@@ -306,17 +306,139 @@
 //   userName.value = fullname[1];
 //   userFather.value = fullname[2];
 // });
-let input = document.querySelector("#input");
-let button = document.querySelector("#button");
-button.addEventListener("click", pass_gen);
+// let input = document.querySelector("#input");
+// let button = document.querySelector("#button");
+// console.log(input.disabled);
+//button.addEventListener("click", pass_gen);
+// function pass_gen() {
+//   let chrs = "abdehkmnpswxzABDEFGHKMNPQRSTWXZ1234567890";
+//   var str = "";
+//   for (var i = 0; i < 8; i++) {
+//     var pos = Math.floor(Math.random() * chrs.length);
+//     str += chrs.substring(pos, pos + 1);
+//   }
+//   //console.log(str);
+//   input.value = str;
+// }
+// button.addEventListener("click", function () {
+//   input.disabled = false;
+// // });
+// let elem = document.querySelector("#elem");
 
-function pass_gen() {
-  let chrs = "abdehkmnpswxzABDEFGHKMNPQRSTWXZ1234567890";
-  var str = "";
-  for (var i = 0; i < 8; i++) {
-    var pos = Math.floor(Math.random() * chrs.length);
-    str += chrs.substring(pos, pos + 1);
-  }
-  //console.log(str);
-  input.value = str;
-}
+// let button = document.querySelector("#button");
+
+// button.addEventListener("click", function () {
+//   elem.checked = !elem.checked;
+// });
+// let radios = document.querySelectorAll('input[type="radio"]');
+// let button = document.querySelector("#button");
+// let p = document.querySelector("#ggg");
+// button.addEventListener("click", function () {
+//   for (let radio of radios) {
+//     if (radio.checked) {
+//       p.textContent = radio.value;
+//     }
+//   }
+// });
+
+// let abzac = document.querySelector("#abzac");
+// let elem = document.querySelector("#elem");
+// elem.addEventListener("input", function () {
+//   let sumOfLetters = this.value.split("").length;
+//   if (sumOfLetters >= 5) {
+//     console.log("5 сиволов");
+//   }
+//   //console.log(sumOfLetters);
+// });
+// let elem = document.querySelector("#elem");
+// let button = document.querySelector("#button");
+
+// button.addEventListener("click", function () {
+//   elem.focus();
+// });
+// select.addEventListener("change", function () {
+//   //console.log(this.value);
+//   if (this.value <= 5) {
+//     console.log("Work day");
+//   } else {
+//     console.log("Week-end");
+//   }
+// });
+// let select = document.querySelector("#select");
+// let button = document.querySelector("#button");
+// button.addEventListener("click", function () {
+//   select.value = "один";
+// });
+// select.selectedIndex = 2;
+// console.log(select.selectedIndex);
+
+//let select = document.querySelector("#select");
+// select.addEventListener("change", function () {
+//   //console.log(this.value);
+//let date = new Date();
+//   //console.log(date.getDay());
+//   for (let i = 1; i < 8; i++) {
+//     if ((this.value === String(i)) & (this.value == date.getDay())) {
+//       this.hasAttribute("selected");
+//     }
+//   }
+
+// if (this.value <= 5) {
+//   console.log("Work day");
+// } else {
+//   console.log("Week-end");
+// }
+// });
+// for (let option of select) {
+//   //console.log(option.value);
+//   if (option.value == date.getDay()) {
+//     option.selected = true;
+//   }
+// }
+
+//console.log(document.querySelectorAll("#select option"));
+
+// let select = document.querySelector("#select");
+// let date = new Date();
+// let option = select[date.getDay() - 1];
+// option.selected = true;
+// let textarea = document.querySelector("textarea");
+// let div = document.querySelector("div");
+
+// textarea.addEventListener("blur", function () {
+//   //console.log(div.textContent);
+//   div.textContent = textarea.value;
+// });
+
+// let checkbox = document.querySelector("#checkbox");
+
+// let button = document.querySelector("#button");
+// console.log();
+// let button = document.querySelectorAll('#button');
+// let div = document.querySelectorAll('#div');
+
+// btn.addEventListener('click', function() {
+// 	if (checkbox.checked) {
+// 		div.value = '111';
+// 	} else {
+// 		div.value = '222';
+// 	}
+// });
+// let elem = document.querySelector("#elem");
+// console.log(elem.checked);
+// let elem = document.querySelector("#elem");
+
+// elem.addEventListener("click", function (event) {
+//   console.log(event);
+// });
+// let checkbox = document.querySelector("input");
+// let button = document.querySelector("button");
+// let div = document.querySelector("div");
+// //console.log(div.textContent);
+// button.addEventListener("click", function () {
+//   if (checkbox.checked) {
+//     div.textContent = "111";
+//   } else {
+//     div.textContent = "222";
+//   }
+// });
