@@ -442,3 +442,763 @@
 //     div.textContent = "222";
 //   }
 // });
+// let elem = document.getElementById("elem");
+
+// document.addEventListener("mousemove", function (event) {
+//   elem.innerHTML = event.clientX + " : " + event.clientY;
+//   console.log(event.type);
+// });
+// let elem = document.querySelector("#elem");
+
+// elem.addEventListener("click", func);
+// elem.addEventListener("dblclick", func);
+
+// function func(event) {
+//   if (event.type == "click") {
+//     elem.style.color = "red";
+//   } else {
+//     elem.style.color = "green";
+//   }
+// }
+// let elem = document.querySelector("#elem");
+
+// elem.addEventListener("click", function (event) {
+//   console.log(event.target); // выведет наш абзац
+//   console.log(this); // выведет наш див
+// });
+
+// let elems = document.querySelectorAll("ul");
+// //console.log(elem);
+// for (let elem of elems) {
+//   elem.addEventListener("click", function (event) {
+//     //console.log(event.target.textContent); // выведет наш абзац
+//     if (event.target.tagName == "LI") {
+//       event.target.textContent = event.target.textContent + "!";
+//     } else {
+//       let newLi = document.createElement("li");
+//       newLi.appendChild(document.createTextNode("newText"));
+//       document.querySelector("ul").appendChild(newLi);
+//     }
+//   });
+// }
+// let elem = document.querySelector("input");
+// let p = document.querySelector("p");
+// elem.addEventListener("keypress", function (event) {
+//   //console.log(elem.textContent);
+//   if (event.key == "Enter") {
+//     p.textContent = elem.value;
+//   }
+// });
+// let elem = document.querySelector("#elem");
+
+// elem.addEventListener("click", function (event) {
+//   // if (event.ctrlKey) {
+//   //   console.log("нажат Ctrl");
+//   // }
+
+//   if (event.altKey) {
+//     //console.log("нажат Alt");
+//     elem.style.color = "red";
+//   }
+
+// if (event.shiftKey) {
+//   console.log("нажат Shift");
+// }
+// });
+// let elem = document.querySelector("#elem");
+
+// elem.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   console.log("Вы не можете перейти по этой ссылке!");
+// });
+let elem1 = document.querySelector("#elem1");
+let elem2 = document.querySelector("#elem2");
+let elem3 = document.querySelector("#elem3");
+
+// elem1.addEventListener("click", function () {
+//   console.log("зеленый");
+// });
+// elem2.addEventListener("click", function () {
+//   console.log("голубой");
+// });
+// elem3.addEventListener("click", function () {
+//   console.log("красный");
+// });
+// let div = document.querySelector("div");
+
+// div.addEventListener("click", function (event) {
+//   if (event.target.matches("div")) {
+//     console.log("клик именно по диву");
+//   }
+//   if (event.target.matches("ul")) {
+//     let newLi = document.createElement("li");
+//     newLi.appendChild(document.createTextNode("newText"));
+//     document.querySelector("ul").appendChild(newLi);
+//     console.log("клик именно по списку");
+//   }
+//   if (event.target.matches("li")) {
+//     event.target.textContent = "!";
+//     console.log("клик именно по элементу списка");
+//   }
+// });
+// let parent = document.querySelector("#parent");
+// let button = document.querySelector("button");
+// let block = document.querySelector("#block");
+
+// button.addEventListener("click", function () {
+//   block.classList.add("active");
+//   event.stopImmediatePropagation();
+// });
+
+// parent.addEventListener("click", function () {
+//   block.classList.remove("active");
+// });
+
+// elem1.addEventListener(
+//   "click",
+//   function () {
+//     console.log("зеленый - погружение");
+//   },
+//   true
+// );
+// elem1.addEventListener(
+//   "click",
+//   function () {
+//     console.log("зеленый - всплытие");
+//   },
+//   false
+// );
+
+// elem2.addEventListener(
+//   "click",
+//   function () {
+//     console.log("голубой - погружение");
+//   },
+//   true
+// );
+// elem2.addEventListener(
+//   "click",
+//   function () {
+//     console.log("голубой - всплытие");
+//   },
+//   false
+// );
+
+// elem3.addEventListener(
+//   "click",
+//   function () {
+//     console.log("красный - погружение");
+//   },
+//   true
+// );
+// elem3.addEventListener(
+//   "click",
+//   function () {
+//     console.log("красный- всплытие");
+//   },
+//   false
+// );
+
+// let button = document.querySelector("button");
+// let list = document.querySelector("ul");
+// let items = list.querySelectorAll("li");
+
+// function handler() {
+//   this.innerHTML = this.innerHTML + "!";
+// }
+
+// for (let item of items) {
+//   item.addEventListener("click", handler);
+// }
+
+// button.addEventListener("click", function () {
+//   let item = document.createElement("li");
+//   item.innerHTML = "item";
+
+//   item.addEventListener("click", handler);
+
+//   list.appendChild(item);
+// });
+
+// list.addEventListener("click", function (event) {
+//   let li = event.target.closest("li");
+
+//   if (li) {
+//     li.innerHTML = li.innerHTML + "!";
+//   }
+// });
+
+// button.addEventListener("click", function () {
+//   let item = document.createElement("li");
+//   item.innerHTML = "item";
+//   list.appendChild(item);
+// });
+
+// let elem = document.querySelector("#elem");
+// elem.addEventListener("blur", parent);
+
+// function parent() {
+//   console.log(this.value); // выведет ссылку на наш инпут
+//   let self = this;
+//   function child() {
+//     console.log(self.value); // выведет undefined
+//   }
+//   child();
+// }
+
+//console.log(typeof elem.value);
+
+// function func() {
+//   let self = Number(this.value);
+//   function square() {
+//     return self * self;
+//   }
+//   alert(square());
+//   //square();
+// }
+// let elem = document.querySelector("#elem");
+// elem.addEventListener("blur", func);
+// let elem = document.getElementById("elem");
+
+// function func(name, surname) {
+//   console.log(this.value + ", " + name + " " + surname);
+// }
+
+// func = func.bind(elem);
+// func("John", "Smit");
+// func("Eric", "Luis");
+
+let start = document.querySelector("#start");
+let stop = document.querySelector("#stop");
+// let timerId;
+// start.addEventListener("click", function () {
+//   let i = 100;
+//   timerId = setInterval(function () {
+//     console.log(--i);
+
+//     if (i == 90) {
+//       clearInterval(timerId);
+//     }
+//   }, 1000);
+// });
+// // Останавливаем таймер:
+// stop.addEventListener("click", function () {
+//   clearInterval(timerId);
+// });
+
+// let timerId;
+
+// start.addEventListener("click", function func() {
+//   timerId = setInterval(function () {
+//     let date = new Date();
+//     console.log(date.getMinutes() + " " + date.getSeconds());
+//   }, 1000);
+//   this.removeEventListener("click", func);
+// });
+
+// stop.addEventListener("click", function () {
+//   clearInterval(timerId);
+// });
+
+// let elem = document.querySelector("#elem");
+
+// let timerId = setInterval(function () {
+//   elem.value = Number(elem.value) - 1;
+//   if (elem.value == "7") {
+//     clearInterval(timerId);
+//   }
+// }, 1000);
+
+// elem.addEventListener("click", function () {
+//   let self = this;
+//   setInterval(function () {
+//     self.value = Number(self.value) + 1;
+//   }, 1000);
+// });
+
+// elem.addEventListener("click", function () {
+//   setInterval(() => (this.value = Number(elem.value) + 1), 1000);
+// });
+
+// elem.addEventListener("click", function () {
+//   setInterval(
+//     (function (self) {
+//       return function () {
+//         self.value = Number(self.value) + 1;
+//       };
+//     })(this),
+//     1000
+//   );
+// });
+
+// elem.addEventListener("click", function () {
+//   setInterval((function () {})(this), 1000);
+// });
+// let elem = document.querySelector("#elem");
+
+// elem.addEventListener("click", function () {
+//   setInterval(
+//     function (self) {
+//       console.log(self.value);
+//     },
+//     1000,
+//     this
+//   );
+// });
+// elem.addEventListener("click", function () {
+//   setInterval(
+//     function (self) {
+//       self.value--;
+//     },
+//     1000,
+//     this
+//   );
+// });
+
+// let elem = document.querySelector("#elem");
+// //let p = document.querySelector("p");
+// elem.addEventListener("click", function () {
+//   let timerId = setInterval(
+//     function () {
+//       console.log(Number(elem.value) * Number(elem.value));
+//       elem.value = Number(elem.value) * Number(elem.value);
+
+//       // if (p.textContent == "0") {
+//       //   clearInterval(timerId);
+//       // }
+//     },
+//     1000,
+//     this
+//   );
+// });
+
+// let p = document.querySelector("p");
+
+// setTimeout(function () {
+//   p.textContent = "Hey!";
+// }, 3000);
+// let parent = document.querySelector("#parent");
+
+// let p = document.createElement("p");
+// p.textContent = "!";
+
+// p.addEventListener("click", function () {
+//   console.log(this.textContent);
+// });
+
+// parent.appendChild(p);
+
+// let parent = document.querySelector("#parent");
+
+// for (let i = 1; i <= 9; i++) {
+//   let li = document.createElement("li");
+//   li.textContent = i;
+
+//   parent.appendChild(li);
+// }.
+
+// let parent = document.querySelector("#parent");
+// let p = document.querySelector("p");
+
+// for (let i = 1; i <= 5; i++) {
+//   let input = document.createElement("input");
+//   input.textContent = "!";
+
+//   // Навешиваем обработчик клика:
+//   input.addEventListener("blur", function () {
+//     p.textContent = p.textContent + input.value;
+//   });
+
+//   parent.appendChild(input);
+// }
+
+// let parent = document.querySelector("#parent");
+// let button = document.querySelector("button");
+
+// //console.log(parent);
+
+// button.addEventListener("click", function () {
+//   parent.lastElementChild.remove();
+// });
+
+// let parent = document.querySelector("#elem");
+// let liFinish = document.createElement("li");
+// liFinish.innerHTML = "finish";
+// let liStart = document.createElement("li");
+// liStart.innerHTML = "start";
+// parent.append(liFinish);
+// parent.prepend(liStart);
+// let parent = document.querySelector("#parent");
+// let elem = document.querySelector("#elem");
+// let lis = document.querySelectorAll("li");
+
+// let newElem = document.createElement("li");
+
+// newElem.innerHTML = "new";
+
+// parent.insertBefore(newElem, elem);
+
+// for (let li1 of lis) {
+//   li1.addEventListener("click", function () {
+//     li1.textContent = li1.textContent + "!";
+//   });
+// }
+
+// let p = document.createElement("p");
+// p.innerHTML = "!";
+
+// let target = document.querySelector("#target");
+// target.insertAdjacentElement("beforeBegin", p);
+
+// let p = document.createElement("p");
+// p.innerHTML = "!!!";
+
+// let target = document.querySelector("#elem");
+// target.insertAdjacentElement("afterEnd", p);
+
+// let target = document.querySelector("#elem");
+// target.insertAdjacentHTML(
+//   "afterBegin",
+//   '<div class="www"><p>text</p> <p>text</p><input></div>'
+// );
+
+// let parent = document.querySelector("#parent");
+// let elem = parent.querySelector(".elem");
+
+// let clone = elem.cloneNode(true);
+// parent.appendChild(clone);
+
+// let parent = document.querySelector("#parent");
+
+// let arr = [1, 2, 3, 4, 5];
+
+// for (let elem of arr) {
+//   let p = document.createElement("p");
+//   p.textContent = elem;
+
+//   parent.appendChild(p);
+//   p.addEventListener("click", function () {
+//     p.textContent = p.textContent + "!";
+//   });
+// }
+
+// let parent = document.querySelector("#elem");
+
+// let arr = ["hghg", 2, "xc21", 4, 5];
+
+// for (let elem of arr) {
+//   let li = document.createElement("li");
+//   li.textContent = elem;
+
+//   parent.appendChild(li);
+//   li.addEventListener("click", function func() {
+//     li.textContent = li.textContent + "!";
+//     this.removeEventListener("click", func);
+//   });
+// }
+
+// let table = document.querySelector("#table");
+// let inp1 = document.querySelector("#trr");
+// let inp2 = document.querySelector("#tdd");
+// let button = document.querySelector("button");
+// let k = 2;
+
+// function func() {
+//   for (let i = 0; i < Number(inp1.value); i++) {
+//     let tr = document.createElement("tr");
+
+//     for (let i = 0; i < Number(inp2.value); i++) {
+//       let td = document.createElement("td");
+//       td.textContent = k;
+//       k += 2;
+//       tr.appendChild(td);
+//     }
+
+//     table.appendChild(tr);
+//   }
+// }
+
+// button.addEventListener("click", func);
+
+// let table = document.querySelector("#table");
+// let arr = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+//   [10, 11, 12],
+// ];
+
+// for (let subArr of arr) {
+//   let tr = document.createElement("tr");
+//   for (let elem of subArr) {
+//     let td = document.createElement("td");
+//     td.textContent = elem * elem;
+//     tr.appendChild(td);
+//   }
+//   table.appendChild(tr);
+// }
+
+// let users = [
+//   {
+//     name: "name1",
+//     surname: "surname1",
+//     patronymic: "patronymic1",
+//   },
+//   {
+//     name: "name2",
+//     surname: "surname2",
+//     patronymic: "patronymic2",
+//   },
+//   {
+//     name: "name3",
+//     surname: "surname3",
+//     patronymic: "patronymic3",
+//   },
+// ];
+
+// let table = document.getElementById("table");
+
+// for (let user of users) {
+//   let tr = document.createElement("tr");
+
+//   let td1 = document.createElement("td");
+//   td1.textContent = user.name;
+//   tr.appendChild(td1);
+
+//   let td2 = document.createElement("td");
+//   td2.textContent = user.surname;
+//   tr.appendChild(td2);
+
+//   let td3 = document.createElement("td");
+//   td3.textContent = user.patronymic;
+//   tr.appendChild(td3);
+
+//   table.appendChild(tr);
+// }
+
+// let employees = [
+//   { name: "employee1", age: 30, salary: 400 },
+//   { name: "employee2", age: 31, salary: 500 },
+//   { name: "employee3", age: 32, salary: 600 },
+// ];
+
+// for (let employee of employees) {
+//   let tr = document.createElement("tr");
+
+//   let td1 = document.createElement("td");
+//   td1.textContent = employee.name;
+//   tr.appendChild(td1);
+
+//   let td2 = document.createElement("td");
+//   td2.textContent = employee.age;
+//   tr.appendChild(td2);
+
+//   td2.addEventListener("click", function () {
+//     td2.textContent = Number(td2.textContent) + 1;
+//   });
+
+//   let td3 = document.createElement("td");
+//   td3.textContent = employee.salary;
+//   tr.appendChild(td3);
+//   td3.addEventListener("click", function () {
+//     td3.textContent = Number(td3.textContent) * 1.1;
+//   });
+
+//   table.appendChild(tr);
+// }
+
+// let table = document.querySelector("#table");
+// let button = document.querySelector("button");
+
+// let k = 2;
+
+// button.addEventListener("click", function () {
+//   let tr = document.createElement("tr");
+//   for (let i = 1; i < k + 1; i++) {
+//     let td = document.createElement("td");
+//     tr.appendChild(td);
+//   }
+//   table.appendChild(tr);
+
+//   let trs = document.querySelectorAll("#table tr");
+//   for (let tr of trs) {
+//     let td = document.createElement("td");
+//     tr.appendChild(td);
+//   }
+//   k++;
+// });
+
+// let parent = document.querySelector("#parent");
+
+// for (let i = 1; i <= 9; i++) {
+//   let p = document.createElement("p");
+//   p.textContent = i;
+
+//   p.addEventListener("click", function () {
+//     this.remove();
+//   });
+
+//   parent.appendChild(p);
+// }
+
+// let parent = document.querySelector("#parent");
+// let lis = document.querySelectorAll("li");
+// let button = document.querySelector("#button");
+
+// button.addEventListener("click", function () {
+//   let newLi = document.createElement("li");
+//   newLi.textContent = "x";
+//   parent.appendChild(newLi);
+//   newLi.addEventListener("click", function () {
+//     this.remove();
+//   });
+// });
+// for (let li of lis) {
+//   li.addEventListener("click", function () {
+//     this.remove();
+//   });
+// }
+
+// let elem = document.querySelector("#elem");
+// let remove = document.querySelector("#remove");
+
+// remove.addEventListener("click", function (event) {
+//   elem.remove();
+//   event.preventDefault();
+// });
+
+// let elems = document.querySelectorAll("#parent li");
+
+// for (let elem of elems) {
+//   let remove = document.createElement("a");
+//   remove.href = "";
+//   remove.textContent = "remove";
+//   elem.appendChild(remove);
+
+//   remove.addEventListener("click", function (event) {
+//     elem.remove();
+//     event.preventDefault();
+//   });
+// }
+
+// let table = document.querySelector("#table");
+// let trs = document.querySelectorAll("tr");
+
+// for (let tr of trs) {
+//   let td = document.createElement("td");
+//   let remove = document.createElement("a");
+//   td.innerHTML = remove;
+//   tr.appendChild(td);
+
+//   remove.href = "";
+//   remove.textContent = "remove";
+//   td.appendChild(remove);
+//   remove.addEventListener("click", function (event) {
+//     tr.remove();
+//     event.preventDefault();
+//   });
+// }
+// let elem = document.querySelector("#elem");
+// let input = document.querySelector("#input");
+// input.value = elem.textContent;
+// input.addEventListener("keypress", function () {
+//   elem.textContent = this.value;
+// });
+
+// let elem = document.querySelector("#elem");
+
+// elem.addEventListener("click", function () {
+//   let input = document.createElement("input");
+//   input.value = elem.textContent;
+
+//   input.addEventListener("blur", function () {
+//     elem.textContent = this.value;
+//     this.remove();
+//   });
+
+//   elem.parentElement.appendChild(input);
+// });
+
+// let elem = document.querySelector("#elem");
+
+// elem.addEventListener("click", function () {
+//   let input = document.createElement("input");
+//   input.value = elem.textContent;
+
+//   elem.appendChild(input);
+// });
+// let elem = document.querySelector("#elem");
+
+// elem.addEventListener("click", function func() {
+//   let input = document.createElement("input");
+//   input.value = elem.textContent;
+
+//   elem.textContent = "";
+//   elem.appendChild(input);
+
+//   input.addEventListener("blur", function () {
+//     elem.textContent = this.value;
+//     elem.addEventListener("click", func); // повесим событие обратно
+//   });
+
+//   elem.removeEventListener("click", func);
+// });
+
+// let elem = document.querySelector("#elem");
+
+// elem.addEventListener("click", function func() {
+//   let input = document.createElement("input");
+//   input.value = elem.textContent;
+//   elem.textContent = "";
+//   elem.appendChild(input);
+
+//   input.addEventListener("blur", function () {
+//     elem.textContent = this.value;
+//     elem.addEventListener("click", func);
+//   });
+//   elem.removeEventListener("click", func);
+// });
+
+// let elems = document.querySelectorAll("#parent p");
+
+// for (let elem of elems) {
+//   let remove = document.createElement("a");
+//   remove.href = "";
+//   remove.textContent = "remove";
+//   elem.appendChild(remove);
+
+//   remove.addEventListener("click", function (event) {
+//     elem.remove();
+//     event.preventDefault();
+//   });
+// }
+
+// let elems = document.querySelectorAll("#parent li");
+
+// for (let elem of elems) {
+//   let remove = document.createElement("a");
+//   remove.textContent = "remove";
+//   remove.href = "";
+//   elem.appendChild(remove);
+
+//   remove.addEventListener("click", function (event) {
+//     elem.remove();
+//     event.preventDefault();
+//   });
+// }
+
+// let trs = document.querySelectorAll("tr");
+
+// for (let tr of trs) {
+//   let td = document.createElement("td");
+//   tr.appendChild(td);
+//   let remove = document.createElement("a");
+//   remove.textContent = "remove";
+//   remove.href = "";
+//   td.appendChild(remove);
+
+//   remove.addEventListener("click", function (event) {
+//     tr.remove();
+//     event.preventDefault();
+//   });
+// }
